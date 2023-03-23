@@ -4,10 +4,6 @@ import './App.css';
 import { Content } from 'antd/es/layout/layout';
 import { NotificationInstance } from 'antd/es/notification/interface';
 
-const onFinishFailed = (errorInfo: any) => {
-  console.log(errorInfo);
-};
-
 let api: NotificationInstance;
 let contextHolder;
 const onFinish = (value: {
@@ -45,7 +41,6 @@ function Hello() {
               wrapperCol={{ span: 12 }}
               initialValues={{ remember: true }}
               onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
               autoComplete="off"
             >
               <Form.Item
